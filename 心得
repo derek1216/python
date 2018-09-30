@@ -1,3 +1,7 @@
+//教材 https://github.com/ywchiu/tibamepy
+
+//20180929
+
 SET > 可以使用交集或差集去比較A有而B沒有或反之，或是查出兩者皆有或兩者皆空的值
       #找出 a 業務開發過的客戶 但b 業務沒有開發過的客戶
       set(a) - set(b)
@@ -21,3 +25,21 @@ List > list.get("index","not found") > 使用get()可以避免錯誤並可以回
 
 分群、客戶流失demo
 https://github.com/ywchiu/tibamepy/blob/master/Demo20171119.ipynb
+
+
+//20180930
+使用requests.get遇到RemoteDisconnected問題，request headers和form data
+{} > dist
+[] > list
+() > set
+pandas.DataFrame({})
+
+#select category, max(view_cnt) from newsdf group by category
+newsdf.groupby('category')['view_cnt'].max().sort_values(ascending=False)
+
+#每一分類最多人瀏覽
+newsdf[newsdf.groupby('category')['view_cnt'].transform(max) == newsdf['view_cnt']]
+
+#解決pandas plot 中文問題
+% pylab inline
+plt.rcParams['font.sans-serif'] = ['simhei']
