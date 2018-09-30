@@ -13,3 +13,11 @@ List > list.get("index","not found") > 使用get()可以避免錯誤並可以回
 [::] > 可以當作 for(i=1 ; i<len() ; i++)
 
 {} > 要更新值可使用.update({'d':'old', 'e':'newnew'})
+
+
+學習到利用英文和中文斷詞技巧，可以算出一篇文章重覆最多次的關鍵字
+進而可以推算出這些關鍵字對應的產品
+
+
+分群、客戶流失demo
+https://github.com/ywchiu/tibamepy/blob/master/Demo20171119.ipynb
