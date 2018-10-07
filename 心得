@@ -23,6 +23,7 @@ List > list.get("index","not found") > 使用get()可以避免錯誤並可以回
 進而可以推算出這些關鍵字對應的產品
 
 
+
 分群、客戶流失demo
 https://github.com/ywchiu/tibamepy/blob/master/Demo20171119.ipynb
 
@@ -43,3 +44,30 @@ newsdf[newsdf.groupby('category')['view_cnt'].transform(max) == newsdf['view_cnt
 #解決pandas plot 中文問題
 % pylab inline
 plt.rcParams['font.sans-serif'] = ['simhei']
+
+//20181006
+numpy > pandas > DataFrame
+df.dropna()
+df['price'].map(normalizePrice).head()
+df['price'].map(lambda e : int(e.replace('元/月','').replace(',', ''))).head()
+
+# {m,n} => match at least m characters, at most n characters
+re.search('\w{3,8}', 'apple')
+
+# {1,} => match at least 1 characters
+re.search('\w{1,}', 'apple')
+
+! pip install pdfminer3k
+
+
+//20181007
+箱型圖可以看出數據的分散狀況亦可看出離群值數量狀況
+第一四分位數 > 最小和中位數的中位數
+第二四分位數 > 中位數
+第三四分位數 > 中位數和最大數的中位數
+
+標準差 > 估算合理的變動幅度
+舉例 > 老闆平均每日賺一萬, 標準差若為一千, 則表示賺九千九和一萬一都在可接受範圍內
+
+相關係數 > 舉例 > 台股大盤和台積電的相關係數為80%以上, 表示兩著相關度極高
+
