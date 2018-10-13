@@ -51,6 +51,15 @@ df.dropna()
 df['price'].map(normalizePrice).head()
 df['price'].map(lambda e : int(e.replace('元/月','').replace(',', ''))).head()
 
+
+//181013
+
+regr.intercept_ 截距 -> 出社會的起薪
+regr.coef_ 回歸係數 -> 每多一年加的薪水
+regr.predict(np.array([[10], [20]])) 套用模型進行預測
+
+
+
 # {m,n} => match at least m characters, at most n characters
 re.search('\w{3,8}', 'apple')
 
